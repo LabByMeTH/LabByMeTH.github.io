@@ -1,0 +1,161 @@
+/*
+font-family: 'Merriweather', serif; \\ Head EN
+font-family: 'Montserrat', sans-serif; \\ Content EN
+font-family: 'Mali', cursive; \\ Content TH
+font-family: 'Itim', cursive; \\ Head TH
+font-family: 'Dokdo', cursive; \\ LabMadLeaning
+*/
+html{
+  scroll-behavior: smooth;
+}
+body{
+  cursor: default;
+  height: 300vh;
+}
+
+
+/*Navigationbar*/
+.navigationbar{
+  width: 100%;
+  position: sticky;
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+.navigationbar .NameWeb{
+  float: left;
+  color: #000000;
+  font-family: 'Merriweather', serif;
+  font-size: 25px;
+  margin-left: 40px;
+}
+.navigationbar .NavigationbarNormal{
+  float: right;
+  margin-right: 40px;
+  position: relative;
+  transform: translateY(25%);
+}
+.navigationbar .NavigationbarNormal ul{
+  display: inline-block;
+}
+.navigationbar .NavigationbarNormal ul li{
+  display: inline-block;
+  list-style: none;
+  margin: 0 10px 0 10px;
+}
+.navigationbar .NavigationbarNormal ul li a{
+  text-decoration: none;
+  color: #000000;
+  font-family: 'Merriweather', serif;
+  font-size: 16px;
+  transition: 0.5s;
+}
+
+.navigationbar .NavigationbarNormal ul li a:hover{
+  color: rgba(0, 0, 0, 0.6);
+  border-bottom: 2px solid rgba(0, 0, 0, 1);
+}
+
+
+/*Banner*/
+.ImageTop{
+  width: 100%;
+  position: relative;
+  height: 70vh;
+  overflow: hidden;
+}
+.ImageTop .ImageTopIMG{
+  width: 100%;
+  filter: blur(10px);
+}
+.ImageTop .ContentInImageTop{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.ImageTop .ContentInImageTop b{
+  color: #ffffff;
+  font-family: 'Dokdo', cursive;
+  font-size: 5vw;
+}
+
+
+/*Go to top button*/
+#GoToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  font-size: 15px;
+  border: none;
+  outline: none;
+  background-color: #FF0049;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  opacity: 0.5;
+  transition: 0.5s;
+}
+
+#GoToTopBtn:hover {
+  opacity: 1;
+}
+
+
+/*Box*/
+.Box{
+  width: 250px;
+  margin: 0 10px 0 10px;
+  display: inline-block;
+}
+.Box img{
+  width: 100%;
+  border-radius: 5px;
+}
+.Box .Content_Box{
+  margin-left: auto;
+  margin-right: auto;
+  transform: translateY(-30px);
+  width: 85%;
+  height: 150px;
+  padding: 5px;
+  background-color: #ffffff;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  text-align: justify;
+  font-size: 20px;
+  font-family: 'Itim', cursive;
+  font-family: 'Merriweather', serif;
+}
+.Box .Content_Box .PostBy{
+  position: absolute;
+  bottom: 5px;
+  font-size: 12px;
+}
+.Box .Content_Box .PostBy .PostByIMG{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transform: translateY(9px);
+}
+
+.Box:hover{
+  cursor: pointer;
+}
+
+
+@media only screen and (max-width: 1220px) {
+  .ImageTop{
+    height: 50vh;
+  }
+}
+
+@media only screen and (max-width: 860px) {
+  .ImageTop .ContentInImageTop b{
+    font-size: 40px;
+  }
+}

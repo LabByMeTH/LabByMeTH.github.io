@@ -1,0 +1,52 @@
+/*
+font-family: 'Merriweather', serif; \\ Head EN
+font-family: 'Montserrat', sans-serif; \\ Content EN
+font-family: 'Mali', cursive; \\ Content TH
+font-family: 'Itim', cursive; \\ Head TH
+font-family: 'Dokdo', cursive; \\ LabMadLeaning
+*/
+.New{
+  position: relative;
+  width: 1200px;
+  left: 50%;
+  transform: translate(-50%, -100px);
+}
+.ImageTop .ContentInImageTop .ContentInImageTop_Icon{
+  text-align: center;
+}
+.ImageTop .ContentInImageTop .ContentInImageTop_Icon a{
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 2vw;
+  margin: 0 10px 0 10px;
+  transition: 0.5s;
+}
+.ImageTop .ContentInImageTop .ContentInImageTop_Icon .Facebook:hover{
+  color: #4267B2;
+}
+.ImageTop .ContentInImageTop .ContentInImageTop_Icon .Instagram:hover{
+  color: #FD1D1D;
+}
+.ImageTop .ContentInImageTop .ContentInImageTop_Icon .Twitter:hover{
+  color: #1DA1F2;
+}
+
+@media only screen and (max-width: 1220px) {
+  .New{
+    position: relative;
+    width: auto;
+    margin: 0 10px 0 10px;
+  }
+  .New .Box{
+    width: 170px;
+  }
+}
+
+@media only screen and (max-width: 860px) {
+  .New .Box{
+    width: 250px;
+  }
+  .ImageTop .ContentInImageTop .ContentInImageTop_Icon a{
+    font-size: 20px;
+  }
+}
