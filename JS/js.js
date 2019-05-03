@@ -17,3 +17,10 @@ function GoTotopFunction() {
   document.documentElement.scrollTop = 0;
 }
 /*Go to top button*/
+
+/*NavigationbarPhone*/
+function NavigationbarPhoneFunction(x) {
+  x.classList.toggle("change");
+  x.classList.toggle("Show");
+}
+/*NavigationbarPhone*/

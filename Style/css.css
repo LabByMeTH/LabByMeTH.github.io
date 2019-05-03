@@ -33,10 +33,12 @@ body{
   margin-left: 40px;
 }
 .navigationbar .NavigationbarNormal{
+  display: block;
   float: right;
   margin-right: 40px;
   position: relative;
   transform: translateY(25%);
+  transition: 0.5s;
 }
 .navigationbar .NavigationbarNormal ul{
   display: inline-block;
@@ -57,6 +59,75 @@ body{
 .navigationbar .NavigationbarNormal ul li a:hover{
   color: rgba(0, 0, 0, 0.6);
   border-bottom: 2px solid rgba(0, 0, 0, 1);
+}
+
+
+.navigationbar .NavigationbarPhone{
+  width: 100%;
+  background-color: #ffffff;
+  height: 0;
+  transition: 0.5s;
+}
+.navigationbar .NavigationbarPhone ul{
+  display: block;
+  margin: 0;
+  padding: 0;
+  transform: translateY(-100%);
+  transition: 0.5s;
+}
+.navigationbar .NavigationbarPhone ul li{
+  width: 100%;
+  display: inline-block;
+  list-style: none;
+  margin: 0;
+  padding: 10px 0 10px 0;
+  transition: 0.5s;
+  text-decoration: none;
+  text-align: center;
+  color: #000000;
+  font-family: 'Merriweather', serif;
+  font-size: 16px;
+}
+
+.navigationbar .NavigationbarPhone ul li:hover{
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+
+.container {
+  display: none;
+  cursor: pointer;
+  float: right;
+  margin-right: 40px;
+  position: relative;
+  transform: translateY(50%);
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.5s;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.Show .NavigationbarPhone{
+  height: 50vh;
+}
+.Show .NavigationbarPhone ul{
+  transform: translateY(0);
 }
 
 
@@ -84,6 +155,7 @@ body{
 }
 
 
+
 /*Go to top button*/
 #GoToTopBtn {
   display: none;
@@ -105,6 +177,7 @@ body{
 #GoToTopBtn:hover {
   opacity: 1;
 }
+
 
 
 /*Box*/
@@ -149,14 +222,22 @@ body{
 }
 
 
+
+
 @media only screen and (max-width: 1220px) {
   .ImageTop{
     height: 50vh;
   }
 }
 
-@media only screen and (max-width: 860px) {
+@media only screen and (max-width: 835px) {
   .ImageTop .ContentInImageTop b{
     font-size: 40px;
+  }
+  .navigationbar .NavigationbarNormal{
+    display: none;
+  }
+  .container {
+    display: inline-block;
   }
 }

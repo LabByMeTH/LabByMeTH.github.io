@@ -10,6 +10,8 @@ font-family: 'Dokdo', cursive; \\ LabMadLeaning
   width: 1200px;
   left: 50%;
   transform: translate(-50%, -100px);
+  margin: 0;
+  padding: 0;
 }
 .ImageTop .ContentInImageTop .ContentInImageTop_Icon{
   text-align: center;
@@ -31,22 +33,29 @@ font-family: 'Dokdo', cursive; \\ LabMadLeaning
   color: #1DA1F2;
 }
 
+
+
+
 @media only screen and (max-width: 1220px) {
   .New{
-    position: relative;
     width: auto;
-    margin: 0 10px 0 10px;
   }
   .New .Box{
     width: 170px;
   }
 }
 
-@media only screen and (max-width: 860px) {
+@media only screen and (max-width: 835px) {
   .New .Box{
     width: 250px;
   }
   .ImageTop .ContentInImageTop .ContentInImageTop_Icon a{
     font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .New .Box{
+    width: 40vw;
   }
 }
