@@ -9,7 +9,7 @@ font-family: 'Dokdo', cursive; \\ LabMadLeaning
   position: relative;
   width: 1200px;
   left: 50%;
-  transform: translate(-50%, -100px);
+  transform: translate(-50%, -50px);
   margin: 0;
   padding: 0;
 }
