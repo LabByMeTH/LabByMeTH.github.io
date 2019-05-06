@@ -18,12 +18,12 @@ body{
 /*Navigationbar*/
 .navigationbar{
   width: 100%;
-  position: sticky;
   background-color: #ffffff;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 99;
+  overflow: hidden;
 }
 .navigationbar .NameWeb{
   float: left;
@@ -33,15 +33,11 @@ body{
   margin-left: 40px;
 }
 .navigationbar .NavigationbarNormal{
-  display: block;
   float: right;
   margin-right: 40px;
   position: relative;
   transform: translateY(25%);
   transition: 0.5s;
-}
-.navigationbar .NavigationbarNormal ul{
-  display: inline-block;
 }
 .navigationbar .NavigationbarNormal ul li{
   display: inline-block;
@@ -93,6 +89,15 @@ body{
   background-color: rgba(0, 0, 0, 0.3);
 }
 
+#icon_navigationbar_left{
+  position: absolute;
+  left: 30vw;
+}
+#icon_navigationbar_right{
+  position: absolute;
+  right: 30vw;
+}
+
 
 .container {
   display: none;
@@ -100,31 +105,32 @@ body{
   float: right;
   margin-right: 40px;
   position: relative;
-  transform: translateY(50%);
+  transform: translateY(30%);
+  z-index: 100;
 }
 
-.bar1, .bar2, .bar3 {
+.bar1, .bar2, .bar3{
   width: 35px;
   height: 5px;
   background-color: #333;
-  margin: 6px 0;
+  margin: 4px 0;
   transition: 0.5s;
 }
 
-.change .bar1 {
-  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-  transform: rotate(-45deg) translate(-9px, 6px);
+.change .bar1{
+  transform: rotate(-45deg) translate(-7px, 5px);
 }
 
-.change .bar2 {opacity: 0;}
+.change .bar2{
+  opacity: 0;
+}
 
-.change .bar3 {
-  -webkit-transform: rotate(45deg) translate(-8px, -8px);
-  transform: rotate(45deg) translate(-8px, -8px);
+.change .bar3{
+  transform: rotate(45deg) translate(-7px, -7px);
 }
 
 .Show .NavigationbarPhone{
-  height: 50vh;
+  height: 100vh;
 }
 .Show .NavigationbarPhone ul{
   transform: translateY(0);
@@ -162,7 +168,7 @@ body{
   position: fixed;
   bottom: 20px;
   right: 20px;
-  z-index: 99;
+  z-index: 98;
   font-size: 15px;
   border: none;
   outline: none;
@@ -231,6 +237,9 @@ body{
 }
 
 @media only screen and (max-width: 835px) {
+  .navigationbar .NameWeb{
+    font-size: 15px;
+  }
   .ImageTop .ContentInImageTop b{
     font-size: 40px;
   }
