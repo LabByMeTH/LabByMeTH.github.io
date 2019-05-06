@@ -13,24 +13,26 @@ font-family: 'Dokdo', cursive; \\ LabMadLeaning
   margin: 0;
   padding: 0;
 }
-.ImageTop .ContentInImageTop .ContentInImageTop_Icon{
-  text-align: center;
+.Content{
+  width: auto;
+  position: relative;
+  width: 1200px;
+  left: 50%;
+  transform: translate(-50%, -50px);
+  margin: 0;
+  padding: 0;
+  border: 2.5px solid #000000;
+  border-radius: 20px;
 }
-.ImageTop .ContentInImageTop .ContentInImageTop_Icon a{
-  text-decoration: none;
-  color: #ffffff;
-  font-size: 2vw;
-  margin: 0 10px 0 10px;
-  transition: 0.5s;
-}
-.ImageTop .ContentInImageTop .ContentInImageTop_Icon .Facebook:hover{
-  color: #4267B2;
-}
-.ImageTop .ContentInImageTop .ContentInImageTop_Icon .Instagram:hover{
-  color: #FD1D1D;
-}
-.ImageTop .ContentInImageTop .ContentInImageTop_Icon .Twitter:hover{
-  color: #1DA1F2;
+.Content .Content_Header{
+  font-family: 'Merriweather', serif;
+  color: #000000;
+  font-size: 30px;
+  background-color: #ffffff;
+  position: absolute;
+  transform: translate(65px, -50px);
+  padding: 0 10px 0 10px;
+  z-index: 1;
 }
 
 
@@ -43,10 +45,22 @@ font-family: 'Dokdo', cursive; \\ LabMadLeaning
   .New .Box{
     width: 170px;
   }
+  .Content{
+    width: 800px;
+  }
+  .Content .Box{
+    width: 170px;
+  }
 }
 
 @media only screen and (max-width: 835px) {
   .New .Box{
+    width: 250px;
+  }
+  .Content{
+    width: 550px;
+  }
+  .Content .Box{
     width: 250px;
   }
   .ImageTop .ContentInImageTop .ContentInImageTop_Icon a{
@@ -54,8 +68,14 @@ font-family: 'Dokdo', cursive; \\ LabMadLeaning
   }
 }
 
-@media only screen and (max-width: 560px) {
+@media only screen and (max-width: 580px) {
   .New .Box{
-    width: 40vw;
+    width: 35vw;
+  }
+  .Content{
+    width: 85vw;
+  }
+  .Content .Box{
+    width: 35vw;
   }
 }

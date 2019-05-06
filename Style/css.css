@@ -86,16 +86,25 @@ body{
 }
 
 .navigationbar .NavigationbarPhone ul li:hover{
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.navigationbar .NavigationbarPhone ul li:hover b #icon_navigationbar_left{
+  transform: translateX(-20px);
+}
+.navigationbar .NavigationbarPhone ul li:hover b #icon_navigationbar_right{
+  transform: translateX(20px) scaleX(-1);
 }
 
 #icon_navigationbar_left{
   position: absolute;
   left: 30vw;
+  transition: 0.5s;
 }
 #icon_navigationbar_right{
   position: absolute;
   right: 30vw;
+  transform: scaleX(-1);
+  transition: 0.5s;
 }
 
 
@@ -141,9 +150,15 @@ body{
   height: 70vh;
   overflow: hidden;
 }
-.ImageTop .ImageTopIMG{
+.ImageTop .ImageTopIMG1{
+  display: block;
   width: 100%;
-  filter: blur(10px);
+  filter: blur(2px);
+}
+.ImageTop .ImageTopIMG2{
+  display: none;
+  width: 100%;
+  filter: blur(2px);
 }
 .ImageTop .ContentInImageTop{
   position: absolute;
@@ -155,6 +170,25 @@ body{
   color: #ffffff;
   font-family: 'Dokdo', cursive;
   font-size: 5vw;
+}
+.ImageTop .ContentInImageTop .ContentInImageTop_Icon{
+  text-align: center;
+}
+.ImageTop .ContentInImageTop .ContentInImageTop_Icon a{
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 2vw;
+  margin: 0 10px 0 10px;
+  transition: 0.5s;
+}
+.ImageTop .ContentInImageTop .ContentInImageTop_Icon .Facebook:hover{
+  color: #4267B2;
+}
+.ImageTop .ContentInImageTop .ContentInImageTop_Icon .Instagram:hover{
+  color: #FD1D1D;
+}
+.ImageTop .ContentInImageTop .ContentInImageTop_Icon .Twitter:hover{
+  color: #1DA1F2;
 }
 
 
@@ -169,7 +203,7 @@ body{
   font-size: 15px;
   border: none;
   outline: none;
-  background-color: #FF0049;
+  background-color: #0f0f0f;
   color: white;
   cursor: pointer;
   padding: 15px;
@@ -237,13 +271,45 @@ body{
   .navigationbar .NameWeb{
     font-size: 15px;
   }
-  .ImageTop .ContentInImageTop b{
-    font-size: 40px;
-  }
   .navigationbar .NavigationbarNormal{
     display: none;
   }
   .container {
     display: inline-block;
+  }
+
+  .ImageTop .ImageTopIMG1{
+    display: none;
+  }
+  .ImageTop .ImageTopIMG2{
+    display: block;
+  }
+  .ImageTop .ContentInImageTop b{
+    font-size: 40px;
+  }
+
+  .ImageTop .ContentInImageTop .ContentInImageTop_Icon .Facebook{
+    font-size: 20px;
+  }
+  .ImageTop .ContentInImageTop .ContentInImageTop_Icon .Instagram{
+    font-size: 20px;
+  }
+  .ImageTop .ContentInImageTop .ContentInImageTop_Icon .Twitter{
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 580px){
+  .Box .Content_Box{
+    font-size: 15px;
+    height: 100px;
+  }
+  .Box .Content_Box .PostBy{
+    font-size: 10px;
+  }
+  .Box .Content_Box .PostBy .PostByIMG{
+    width: 20px;
+    height: 20px;
+    transform: translateY(5px);
   }
 }
