@@ -116,7 +116,7 @@ body{
   transition: 0.5s;
 }
 
-.container:focus{
+.container:active{
   outline: none;
   background: none;
 }
@@ -185,7 +185,7 @@ body{
 #GoToTopBtn:hover{
   opacity: 1;
 }
-#GoToTopBtn:focus{
+#GoToTopBtn:active{
   opacity: 0.5;
 }
 
