@@ -116,10 +116,6 @@ body{
   transition: 0.5s;
 }
 
-.container:focus{
-  background-color: inherit;
-}
-
 .change .bar1{
   transform: rotate(-45deg) translate(-7px, 5px);
 }
@@ -183,9 +179,6 @@ body{
 
 #GoToTopBtn:hover{
   opacity: 1;
-}
-#GoToTopBtn:visited{
-  opacity: 0.5;
 }
 
 
