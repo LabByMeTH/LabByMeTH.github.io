@@ -116,9 +116,8 @@ body{
   transition: 0.5s;
 }
 
-.container:active{
-  outline: none;
-  background: none;
+.container:focus{
+  background-color: inherit;
 }
 
 .change .bar1{
@@ -185,7 +184,7 @@ body{
 #GoToTopBtn:hover{
   opacity: 1;
 }
-#GoToTopBtn:active{
+#GoToTopBtn:visited{
   opacity: 0.5;
 }
 
