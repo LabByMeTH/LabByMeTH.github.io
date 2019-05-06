@@ -108,7 +108,6 @@ body{
   transform: translateY(30%);
   z-index: 100;
 }
-
 .bar1, .bar2, .bar3{
   width: 35px;
   height: 5px;
@@ -117,14 +116,17 @@ body{
   transition: 0.5s;
 }
 
+.container:focus{
+  outline: none;
+  background: none;
+}
+
 .change .bar1{
   transform: rotate(-45deg) translate(-7px, 5px);
 }
-
 .change .bar2{
   opacity: 0;
 }
-
 .change .bar3{
   transform: rotate(45deg) translate(-7px, -7px);
 }
@@ -163,7 +165,7 @@ body{
 
 
 /*Go to top button*/
-#GoToTopBtn {
+#GoToTopBtn{
   display: none;
   position: fixed;
   bottom: 20px;
@@ -180,8 +182,11 @@ body{
   transition: 0.5s;
 }
 
-#GoToTopBtn:hover {
+#GoToTopBtn:hover{
   opacity: 1;
+}
+#GoToTopBtn:focus{
+  opacity: 0.5;
 }
 
 
