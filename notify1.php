@@ -29,4 +29,6 @@
 		echo "status : ".$result_['status']; echo "message : ". $result_['message'];
 	}
 	curl_close( $chOne );
+
+	print("Hellooooo");
 ?>
